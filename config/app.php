@@ -17,6 +17,22 @@ return [
 
 	/*
 	|--------------------------------------------------------------------------
+	| Controller IoC Mode
+	|--------------------------------------------------------------------------
+	|
+	| By default, Laravel 5 offers IoC resolving to controller methods.
+	| this functionality is required to use the new Requests classes for handling
+	| form posts.
+	|
+	| IoC is expensive as it invokes runtime reflection on each calls.
+	| If you're not using it, you should turn this off.
+	|
+	*/
+
+	'controller_ioc' => true,
+
+	/*
+	|--------------------------------------------------------------------------
 	| Application URL
 	|--------------------------------------------------------------------------
 	|
@@ -118,7 +134,7 @@ return [
 		'Illuminate\Bus\BusServiceProvider',
 		'Illuminate\Cache\CacheServiceProvider',
 		'Illuminate\Foundation\Providers\ConsoleSupportServiceProvider',
-		'Illuminate\Routing\ControllerServiceProvider',
+		// 'Illuminate\Routing\ControllerServiceProvider',
 		'Illuminate\Cookie\CookieServiceProvider',
 		'Illuminate\Database\DatabaseServiceProvider',
 		'Illuminate\Encryption\EncryptionServiceProvider',
@@ -143,6 +159,7 @@ return [
 		'App\Providers\AppServiceProvider',
 		'App\Providers\ConfigServiceProvider',
 		'App\Providers\RouteServiceProvider',
+		'App\Providers\ControllerServiceProvider',
 
 		/*
 		 * Package Service Providers...
