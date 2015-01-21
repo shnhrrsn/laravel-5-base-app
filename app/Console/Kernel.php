@@ -1,29 +1,24 @@
 <?php namespace App\Console;
 
+use Illuminate\Contracts\Events\Dispatcher;
+use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Console\Scheduling\Schedule;
-use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
-class Kernel extends ConsoleKernel {
+class Kernel extends \Illuminate\Foundation\Console\Kernel {
 
-	/**
-	 * The Artisan commands provided by your application.
-	 *
-	 * @var array
-	 */
 	protected $commands = [
 		'App\Console\Commands\Inspire',
 	];
 
-	/**
-	 * Define the application's command schedule.
-	 *
-	 * @param  \Illuminate\Console\Scheduling\Schedule  $schedule
-	 * @return void
-	 */
-	protected function schedule(Schedule $schedule)
-	{
-		$schedule->command('inspire')
-				 ->hourly();
+	public function __construct(Application $app, Dispatcher $events) {
+		$this->bootstrappers[0] = 'App\Bootstrap\DetectEnvironment';
+		$this->bootstrappers[1] = 'App\Bootstrap\LoadConfiguration';
+
+		parent::__construct($app, $events);
+	}
+
+	protected function schedule(Schedule $schedule) {
+		$schedule->command('inspire')->hourly();
 	}
 
 }

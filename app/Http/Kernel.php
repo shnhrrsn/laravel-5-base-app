@@ -1,14 +1,10 @@
 <?php namespace App\Http;
 
-use Illuminate\Foundation\Http\Kernel as HttpKernel;
+use Illuminate\Routing\Router;
+use Illuminate\Contracts\Foundation\Application;
 
-class Kernel extends HttpKernel {
+class Kernel extends \Illuminate\Foundation\Http\Kernel {
 
-	/**
-	 * The application's global HTTP middleware stack.
-	 *
-	 * @var array
-	 */
 	protected $middleware = [
 		'Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode',
 		'Illuminate\Cookie\Middleware\EncryptCookies',
@@ -18,15 +14,17 @@ class Kernel extends HttpKernel {
 		'Illuminate\Foundation\Http\Middleware\VerifyCsrfToken',
 	];
 
-	/**
-	 * The application's route middleware.
-	 *
-	 * @var array
-	 */
 	protected $routeMiddleware = [
 		'auth' => 'App\Http\Middleware\Authenticate',
 		'auth.basic' => 'Illuminate\Auth\Middleware\AuthenticateWithBasicAuth',
 		'guest' => 'App\Http\Middleware\RedirectIfAuthenticated',
 	];
+
+	public function __construct(Application $app, Router $router) {
+		$this->bootstrappers[0] = 'App\Bootstrap\DetectEnvironment';
+		$this->bootstrappers[1] = 'App\Bootstrap\LoadConfiguration';
+
+		parent::__construct($app, $router);
+	}
 
 }
