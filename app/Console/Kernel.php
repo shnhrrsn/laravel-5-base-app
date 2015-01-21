@@ -7,7 +7,7 @@ use Illuminate\Console\Scheduling\Schedule;
 class Kernel extends \Illuminate\Foundation\Console\Kernel {
 
 	protected $commands = [
-		'App\Console\Commands\Inspire',
+
 	];
 
 	public function __construct(Application $app, Dispatcher $events) {
@@ -18,7 +18,7 @@ class Kernel extends \Illuminate\Foundation\Console\Kernel {
 	}
 
 	protected function schedule(Schedule $schedule) {
-		$schedule->command('inspire')->hourly();
+
 	}
 
 }
