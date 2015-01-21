@@ -37,7 +37,7 @@ class Handler extends ExceptionHandler {
 		if($this->isHttpException($e)) {
 			return $this->renderHttpException($e);
 		} else {
-			if(app('config')->get('app.debug')) {
+			if(config('app.debug')) {
 				$whoops = new \Whoops\Run;
 				$whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
 				return $whoops->handleException($e);

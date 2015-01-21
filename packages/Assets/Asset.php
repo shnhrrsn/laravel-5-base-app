@@ -92,7 +92,7 @@ class Asset {
 		static $published = null;
 
 		if($published === null) {
-			$published = app('config')->get('published_assets');
+			$published = config('published_assets');
 		}
 
 		if(strpos($path, 'assets/') !== 0) {

@@ -10,7 +10,7 @@ class UnpublishCommand extends \Illuminate\Console\Command {
 		chdir(public_path());
 
 		$dirs = [ ];
-		foreach(app('config')->get('published_assets') as $asset) {
+		foreach(config('published_assets') as $asset) {
 			$this->info('Removing asset: ' . $asset);
 			$dirs[] = realpath(dirname($asset));
 			@unlink($asset);
@@ -18,7 +18,7 @@ class UnpublishCommand extends \Illuminate\Console\Command {
 
 		foreach($dirs as $dir) {
 			if(empty($dir) || !file_exists($dir)) continue;
-			
+
 			if(Finder::create()->in($dir)->files()->count() === 0) {
 				$this->info('Removing empty asset directory: ' . $dir);
 				@rmdir($dir);
