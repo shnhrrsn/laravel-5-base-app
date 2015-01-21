@@ -6,7 +6,7 @@ use Illuminate\Contracts\Foundation\Application;
 class Kernel extends \Illuminate\Foundation\Http\Kernel {
 
 	protected $middleware = [
-		'Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode',
+		// 'Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode',
 		'Illuminate\Cookie\Middleware\EncryptCookies',
 		'Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse',
 		'Illuminate\Session\Middleware\StartSession',
@@ -15,9 +15,7 @@ class Kernel extends \Illuminate\Foundation\Http\Kernel {
 	];
 
 	protected $routeMiddleware = [
-		'auth' => 'App\Http\Middleware\Authenticate',
-		'auth.basic' => 'Illuminate\Auth\Middleware\AuthenticateWithBasicAuth',
-		'guest' => 'App\Http\Middleware\RedirectIfAuthenticated',
+
 	];
 
 	public function __construct(Application $app, Router $router) {

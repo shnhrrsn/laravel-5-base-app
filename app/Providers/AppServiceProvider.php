@@ -9,8 +9,7 @@ class AppServiceProvider extends ServiceProvider {
 	 *
 	 * @return void
 	 */
-	public function boot()
-	{
+	public function boot() {
 		//
 	}
 
@@ -18,17 +17,12 @@ class AppServiceProvider extends ServiceProvider {
 	 * Register any application services.
 	 *
 	 * This service provider is a great spot to register your various container
-	 * bindings with the application. As you can see, we are registering our
-	 * "Registrar" implementation here. You can add your own bindings too!
+	 * bindings with the application.
 	 *
 	 * @return void
 	 */
-	public function register()
-	{
-		$this->app->bind(
-			'Illuminate\Contracts\Auth\Registrar',
-			'App\Services\Registrar'
-		);
+	public function register() {
+		// $this->app->bind([ ]);
 	}
 
 }

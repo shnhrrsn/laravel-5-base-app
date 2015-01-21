@@ -18,9 +18,8 @@ class WelcomeController extends Controller {
 	 *
 	 * @return void
 	 */
-	public function __construct()
-	{
-		$this->middleware('guest');
+	public function __construct() {
+		
 	}
 
 	/**
@@ -28,8 +27,7 @@ class WelcomeController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index()
-	{
+	public function index() {
 		return view('welcome');
 	}
 
