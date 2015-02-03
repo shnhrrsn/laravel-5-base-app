@@ -518,12 +518,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "f6fac77f04895e53a518bdb7fb6517e8553aacfc"
+                "reference": "bb313e0ae07e23bf6a677015942f6584963b9014"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/f6fac77f04895e53a518bdb7fb6517e8553aacfc",
-                "reference": "f6fac77f04895e53a518bdb7fb6517e8553aacfc",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/bb313e0ae07e23bf6a677015942f6584963b9014",
+                "reference": "bb313e0ae07e23bf6a677015942f6584963b9014",
                 "shasum": ""
             },
             "require": {
@@ -635,7 +635,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2015-02-01 21:50:00"
+            "time": "2015-02-02 19:37:34"
         },
         {
             "name": "league/flysystem",
@@ -1046,7 +1046,7 @@
             "source": {
                 "type": "git",
                 "url": "http://git2.enormego.com/shnhrrsn/laravel-assets.git",
-                "reference": "672c276cc1a9c2c9b4769a08b9e2eb382db0be7b"
+                "reference": "31c14e5f40ff917b50c39a266b00a2d572e32bf0"
             },
             "require": {
                 "illuminate/console": "5.0.*",
@@ -1075,7 +1075,7 @@
                 }
             ],
             "description": "Asset management for Laravel.",
-            "time": "2015-01-25 07:27:05"
+            "time": "2015-02-03 03:40:32"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -1458,12 +1458,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/HttpKernel.git",
-                "reference": "f61120580838320848e6f75760dfe709c28f700f"
+                "reference": "0bd05cc9b935174724c1d9e10ea1cc4541ce01b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/HttpKernel/zipball/f61120580838320848e6f75760dfe709c28f700f",
-                "reference": "f61120580838320848e6f75760dfe709c28f700f",
+                "url": "https://api.github.com/repos/symfony/HttpKernel/zipball/0bd05cc9b935174724c1d9e10ea1cc4541ce01b0",
+                "reference": "0bd05cc9b935174724c1d9e10ea1cc4541ce01b0",
                 "shasum": ""
             },
             "require": {
@@ -1526,7 +1526,7 @@
             ],
             "description": "Symfony HttpKernel Component",
             "homepage": "http://symfony.com",
-            "time": "2015-02-01 16:10:57"
+            "time": "2015-02-03 10:03:51"
         },
         {
             "name": "symfony/process",
@@ -1771,12 +1771,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "6846dd22f5769628bbf9027363efab6915a06b1b"
+                "reference": "c3d5a36c3e3298bd8b070488fba5537174647353"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/6846dd22f5769628bbf9027363efab6915a06b1b",
-                "reference": "6846dd22f5769628bbf9027363efab6915a06b1b",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/c3d5a36c3e3298bd8b070488fba5537174647353",
+                "reference": "c3d5a36c3e3298bd8b070488fba5537174647353",
                 "shasum": ""
             },
             "require": {
@@ -1819,7 +1819,7 @@
                 "debug",
                 "dump"
             ],
-            "time": "2015-01-21 20:57:55"
+            "time": "2015-02-02 16:32:08"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -1934,12 +1934,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
-                "reference": "fd0ac2007401505fb596fdfb859ec4e103d69e55"
+                "reference": "f8bb8d74ae9c96d2cb91eb675c99f623ab5793db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/fd0ac2007401505fb596fdfb859ec4e103d69e55",
-                "reference": "fd0ac2007401505fb596fdfb859ec4e103d69e55",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/f8bb8d74ae9c96d2cb91eb675c99f623ab5793db",
+                "reference": "f8bb8d74ae9c96d2cb91eb675c99f623ab5793db",
                 "shasum": ""
             },
             "require": {
@@ -1975,7 +1975,7 @@
                     "email": "mike.vanriel@naenius.com"
                 }
             ],
-            "time": "2014-09-02 14:26:20"
+            "time": "2015-02-03 12:17:25"
         },
         {
             "name": "phpspec/php-diff",
