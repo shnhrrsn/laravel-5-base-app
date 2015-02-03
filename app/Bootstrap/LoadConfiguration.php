@@ -37,8 +37,10 @@ class LoadConfiguration extends \Illuminate\Foundation\Bootstrap\LoadConfigurati
 	private function getConfigurationFilesInPath($configPath) {
 		$files = [ ];
 
-		foreach(Finder::create()->files()->depth(0)->name('*.php')->in($configPath) as $file) {
-			$files[basename($file->getRealPath(), '.php')] = [ $file->getRealPath() ];
+		if(file_exists($configPath)) {
+			foreach(Finder::create()->files()->depth(0)->name('*.php')->in($configPath) as $file) {
+				$files[basename($file->getRealPath(), '.php')] = [ $file->getRealPath() ];
+			}
 		}
 
 		return $files;
