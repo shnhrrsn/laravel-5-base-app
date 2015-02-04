@@ -10,13 +10,6 @@ class Kernel extends \Illuminate\Foundation\Console\Kernel {
 
 	];
 
-	public function __construct(Application $app, Dispatcher $events) {
-		$this->bootstrappers[0] = 'App\Bootstrap\DetectEnvironment';
-		$this->bootstrappers[1] = 'App\Bootstrap\LoadConfiguration';
-
-		parent::__construct($app, $events);
-	}
-
 	protected function schedule(Schedule $schedule) {
 
 	}

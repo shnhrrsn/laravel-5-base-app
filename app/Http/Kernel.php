@@ -18,11 +18,4 @@ class Kernel extends \Illuminate\Foundation\Http\Kernel {
 
 	];
 
-	public function __construct(Application $app, Router $router) {
-		$this->bootstrappers[0] = 'App\Bootstrap\DetectEnvironment';
-		$this->bootstrappers[1] = 'App\Bootstrap\LoadConfiguration';
-
-		parent::__construct($app, $router);
-	}
-
 }
