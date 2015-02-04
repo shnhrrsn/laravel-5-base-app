@@ -5,12 +5,6 @@
 		"shnhrrsn/laravel-assets": "dev-master",
 		"filp/whoops": "1.1.*"
 	},
-	"repositories": [
-		{
-			"type": "git",
-			"url" : "http://git2.enormego.com/shnhrrsn/laravel-assets.git"
-		}
-	],
 	"require-dev": {
 		"phpspec/phpspec": "~2.1"
 	},
