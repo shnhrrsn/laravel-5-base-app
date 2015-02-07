@@ -8,3 +8,7 @@ Mainly based on the standard L5 app, with a few changes:
 * Added back in `illuminate/html` and related service providers
 * Removed most of the boilerplate code
 * Removed elixir/gulp in favor of `shnhrrsn/laravel-assets`
+
+## Installation
+
+	composer create-project shnhrrsn/laravel-5-base-app --prefer-dist
