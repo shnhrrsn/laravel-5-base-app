@@ -94,7 +94,7 @@ return [
 	|
 	*/
 
-	'key' => 'TWnkn54KedRyZR78qujEosceRjamTGL9',
+	'key' => 'SomeRandomString',
 
 	'cipher' => MCRYPT_RIJNDAEL_128,
 
