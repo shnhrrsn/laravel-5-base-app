@@ -2,6 +2,6 @@
 
 return [
 
-	'debug' => true
+	'driver' => 'file'
 
 ];
