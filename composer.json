@@ -1,4 +1,6 @@
 {
+	"name": "shnhrrsn/laravel-5-base-app",
+	"description": "Alternative base app for Laravel 5",
 	"require": {
 		"laravel/framework": "5.0.*",
 		"illuminate/html": "5.0.*",
