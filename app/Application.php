@@ -45,4 +45,8 @@ class Application extends \Illuminate\Foundation\Application {
 		return $this['path.storage'] . '/framework/routes.' . $this->environment() . '.php';
 	}
 
+	public function getCachedServicesPath() {
+		return $this['path.storage'] . '/framework/services.' . $this->environment() . '.json';
+	}
+
 }

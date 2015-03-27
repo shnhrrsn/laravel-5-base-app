@@ -16,7 +16,7 @@ class LoadConfiguration extends \Illuminate\Foundation\Bootstrap\LoadConfigurati
 					if($i === 0) continue;
 
 					$values = require $paths[$i];
-					$config->set($key, array_merge($config->get($key), $values));
+					$config->set($key, array_merge_recursive($config->get($key), $values));
 				}
 			}
 		}
