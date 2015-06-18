@@ -5,6 +5,7 @@
 		"php": ">=5.5.9",
 		"laravel/framework": "5.1.*",
 		"illuminate/html": "5.*",
+		"shnhrrsn/laravel-5-base-app-support": "1.0.*",
 		"shnhrrsn/laravel-assets": "1.1.*",
 		"filp/whoops": "1.1.*"
 	},

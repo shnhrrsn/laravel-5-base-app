@@ -4,7 +4,7 @@ use Illuminate\Contracts\Events\Dispatcher;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Console\Scheduling\Schedule;
 
-class Kernel extends \Illuminate\Foundation\Console\Kernel {
+class Kernel extends \Shnhrrsn\LaravelSupport\Console\Kernel {
 
 	protected $commands = [
 
@@ -17,7 +17,7 @@ class Kernel extends \Illuminate\Foundation\Console\Kernel {
 	public function bootstrap() {
 		parent::bootstrap();
 
-		$this->app->singleton('command.key.generate', \App\Console\Commands\KeyGenerateCommand::class);
+		//
 	}
 
 }

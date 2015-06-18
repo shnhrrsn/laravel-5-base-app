@@ -24,7 +24,7 @@ return [
 	| this functionality is required to use the new Requests classes for handling
 	| form posts.
 	|
-	| IoC is expensive as it invokes runtime reflection on each calls.
+	| IoC can be expensive as it invokes runtime reflection on each call.
 	| If you're not using it, you should turn this off.
 	|
 	*/
@@ -158,11 +158,11 @@ return [
 		 */
 		App\Providers\AppServiceProvider::class,
 		App\Providers\RouteServiceProvider::class,
-		App\Providers\ControllerServiceProvider::class,
 
 		/*
 		 * Package Service Providers...
 		 */
+		Shnhrrsn\LaravelSupport\Routing\ControllerServiceProvider::class,
 		Assets\ServiceProvider::class,
 	],
 

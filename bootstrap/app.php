@@ -11,7 +11,7 @@
 |
 */
 
-$app = new App\Application(
+$app = new Shnhrrsn\LaravelSupport\Application(
 	realpath(__DIR__.'/../')
 );
 
@@ -31,7 +31,7 @@ $app->singleton(Illuminate\Contracts\Console\Kernel::class, App\Console\Kernel::
 $app->singleton(Illuminate\Contracts\Debug\ExceptionHandler::class, App\Exceptions\Handler::class);
 
 $app->singleton(Illuminate\Foundation\Bootstrap\DetectEnvironment::class, App\Bootstrap\DetectEnvironment::class);
-$app->singleton(Illuminate\Foundation\Bootstrap\LoadConfiguration::class, App\Bootstrap\LoadConfiguration::class);
+$app->singleton(Illuminate\Foundation\Bootstrap\LoadConfiguration::class, Shnhrrsn\LaravelSupport\Bootstrap\LoadConfiguration::class);
 
 /*
 |--------------------------------------------------------------------------
