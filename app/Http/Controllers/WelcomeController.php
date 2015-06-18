@@ -1,6 +1,6 @@
 <?php namespace App\Http\Controllers;
 
-class WelcomeController extends BaseController {
+class WelcomeController extends BaseWebController {
 
 	/*
 	|--------------------------------------------------------------------------
@@ -12,15 +12,6 @@ class WelcomeController extends BaseController {
 	| controllers, you are free to modify or remove it as you desire.
 	|
 	*/
-
-	/**
-	 * Create a new controller instance.
-	 *
-	 * @return void
-	 */
-	public function __construct() {
-
-	}
 
 	/**
 	 * Show the application welcome screen to the user.
