@@ -1,6 +1,3 @@
 @extends('layout.master')
+@asset('scss', 'welcome')
 
-@section('styles')
-@parent
-	{!! HTML::style(asset_path('scss/welcome.scss')) !!}
-@endsection
