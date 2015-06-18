@@ -38,15 +38,15 @@ class Application extends \Illuminate\Foundation\Application {
 	}
 
 	public function getCachedConfigPath() {
-		return $this['path.storage'] . '/framework/config.' . $this->environment() . '.php';
+		return $this->basePath() . '/bootstrap/cache/config.' . $this->environment() . '.php';
 	}
 
 	public function getCachedRoutesPath() {
-		return $this['path.storage'] . '/framework/routes.' . $this->environment() . '.php';
+		return $this->basePath() . '/bootstrap/cache/routes.' . $this->environment() . '.php';
 	}
 
 	public function getCachedServicesPath() {
-		return $this['path.storage'] . '/framework/services.' . $this->environment() . '.json';
+		return $this->basePath() . '/bootstrap/cache/services.' . $this->environment() . '.json';
 	}
 
 }

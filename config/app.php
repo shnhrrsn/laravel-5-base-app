@@ -94,9 +94,9 @@ return [
 	|
 	*/
 
-	'key' => 'SomeRandomString',
+	'key' => 'SomeRandomStringWith32Characters',
 
-	'cipher' => MCRYPT_RIJNDAEL_128,
+	'cipher' => 'AES-256-CBC',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -111,7 +111,7 @@ return [
 	|
 	*/
 
-	'log' => 'daily',
+	'log' => 'single',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -129,42 +129,41 @@ return [
 		/*
 		 * Laravel Framework Service Providers...
 		 */
-		'Illuminate\Foundation\Providers\ArtisanServiceProvider',
-		'Illuminate\Auth\AuthServiceProvider',
-		'Illuminate\Bus\BusServiceProvider',
-		'Illuminate\Cache\CacheServiceProvider',
-		'Illuminate\Foundation\Providers\ConsoleSupportServiceProvider',
-		// 'Illuminate\Routing\ControllerServiceProvider',
-		'Illuminate\Cookie\CookieServiceProvider',
-		'Illuminate\Database\DatabaseServiceProvider',
-		'Illuminate\Encryption\EncryptionServiceProvider',
-		'Illuminate\Filesystem\FilesystemServiceProvider',
-		'Illuminate\Foundation\Providers\FoundationServiceProvider',
-		'Illuminate\Hashing\HashServiceProvider',
-		'Illuminate\Mail\MailServiceProvider',
-		'Illuminate\Pagination\PaginationServiceProvider',
-		'Illuminate\Pipeline\PipelineServiceProvider',
-		'Illuminate\Queue\QueueServiceProvider',
-		'Illuminate\Redis\RedisServiceProvider',
-		'Illuminate\Auth\Passwords\PasswordResetServiceProvider',
-		'Illuminate\Session\SessionServiceProvider',
-		'Illuminate\Translation\TranslationServiceProvider',
-		'Illuminate\Validation\ValidationServiceProvider',
-		'Illuminate\View\ViewServiceProvider',
-		'Illuminate\Html\HtmlServiceProvider',
+		Illuminate\Foundation\Providers\ArtisanServiceProvider::class,
+		Illuminate\Auth\AuthServiceProvider::class,
+		Illuminate\Bus\BusServiceProvider::class,
+		Illuminate\Cache\CacheServiceProvider::class,
+		Illuminate\Foundation\Providers\ConsoleSupportServiceProvider::class,
+		// Illuminate\Routing\ControllerServiceProvider::class,
+		Illuminate\Cookie\CookieServiceProvider::class,
+		Illuminate\Database\DatabaseServiceProvider::class,
+		Illuminate\Encryption\EncryptionServiceProvider::class,
+		Illuminate\Filesystem\FilesystemServiceProvider::class,
+		Illuminate\Foundation\Providers\FoundationServiceProvider::class,
+		Illuminate\Hashing\HashServiceProvider::class,
+		Illuminate\Mail\MailServiceProvider::class,
+		Illuminate\Pagination\PaginationServiceProvider::class,
+		Illuminate\Pipeline\PipelineServiceProvider::class,
+		Illuminate\Queue\QueueServiceProvider::class,
+		Illuminate\Redis\RedisServiceProvider::class,
+		Illuminate\Auth\Passwords\PasswordResetServiceProvider::class,
+		Illuminate\Session\SessionServiceProvider::class,
+		Illuminate\Translation\TranslationServiceProvider::class,
+		Illuminate\Validation\ValidationServiceProvider::class,
+		Illuminate\View\ViewServiceProvider::class,
+		Illuminate\Html\HtmlServiceProvider::class,
 
 		/*
 		 * Application Service Providers...
 		 */
-		'App\Providers\AppServiceProvider',
-		'App\Providers\ConfigServiceProvider',
-		'App\Providers\RouteServiceProvider',
-		'App\Providers\ControllerServiceProvider',
+		App\Providers\AppServiceProvider::class,
+		App\Providers\RouteServiceProvider::class,
+		App\Providers\ControllerServiceProvider::class,
 
 		/*
 		 * Package Service Providers...
 		 */
-		'Assets\ServiceProvider',
+		Assets\ServiceProvider::class,
 	],
 
 	/*
@@ -180,37 +179,37 @@ return [
 
 	'aliases' => [
 
-		'App'       => 'Illuminate\Support\Facades\App',
-		'Artisan'   => 'Illuminate\Support\Facades\Artisan',
-		'Auth'      => 'Illuminate\Support\Facades\Auth',
-		'Blade'     => 'Illuminate\Support\Facades\Blade',
-		'Cache'     => 'Illuminate\Support\Facades\Cache',
-		'Config'    => 'Illuminate\Support\Facades\Config',
-		'Cookie'    => 'Illuminate\Support\Facades\Cookie',
-		'Crypt'     => 'Illuminate\Support\Facades\Crypt',
-		'DB'        => 'Illuminate\Support\Facades\DB',
-		'Event'     => 'Illuminate\Support\Facades\Event',
-		'File'      => 'Illuminate\Support\Facades\File',
-		'Form'      => 'Illuminate\Html\FormFacade',
-		'Hash'      => 'Illuminate\Support\Facades\Hash',
-		'HTML'      => 'Illuminate\Html\HtmlFacade',
-		'Input'     => 'Illuminate\Support\Facades\Input',
-		'Lang'      => 'Illuminate\Support\Facades\Lang',
-		'Log'       => 'Illuminate\Support\Facades\Log',
-		'Mail'      => 'Illuminate\Support\Facades\Mail',
-		'Paginator' => 'Illuminate\Support\Facades\Paginator',
-		'Password'  => 'Illuminate\Support\Facades\Password',
-		'Queue'     => 'Illuminate\Support\Facades\Queue',
-		'Redirect'  => 'Illuminate\Support\Facades\Redirect',
-		'Redis'     => 'Illuminate\Support\Facades\Redis',
-		'Request'   => 'Illuminate\Support\Facades\Request',
-		'Response'  => 'Illuminate\Support\Facades\Response',
-		'Route'     => 'Illuminate\Support\Facades\Route',
-		'Schema'    => 'Illuminate\Support\Facades\Schema',
-		'Session'   => 'Illuminate\Support\Facades\Session',
-		'URL'       => 'Illuminate\Support\Facades\URL',
-		'Validator' => 'Illuminate\Support\Facades\Validator',
-		'View'      => 'Illuminate\Support\Facades\View',
+		'App'       => Illuminate\Support\Facades\App::class,
+		'Artisan'   => Illuminate\Support\Facades\Artisan::class,
+		'Auth'      => Illuminate\Support\Facades\Auth::class,
+		'Blade'     => Illuminate\Support\Facades\Blade::class,
+		'Cache'     => Illuminate\Support\Facades\Cache::class,
+		'Config'    => Illuminate\Support\Facades\Config::class,
+		'Cookie'    => Illuminate\Support\Facades\Cookie::class,
+		'Crypt'     => Illuminate\Support\Facades\Crypt::class,
+		'DB'        => Illuminate\Support\Facades\DB::class,
+		'Event'     => Illuminate\Support\Facades\Event::class,
+		'File'      => Illuminate\Support\Facades\File::class,
+		'Form'      => Illuminate\Html\FormFacade::class,
+		'Hash'      => Illuminate\Support\Facades\Hash::class,
+		'HTML'      => Illuminate\Html\HtmlFacade::class,
+		'Input'     => Illuminate\Support\Facades\Input::class,
+		'Lang'      => Illuminate\Support\Facades\Lang::class,
+		'Log'       => Illuminate\Support\Facades\Log::class,
+		'Mail'      => Illuminate\Support\Facades\Mail::class,
+		'Paginator' => Illuminate\Support\Facades\Paginator::class,
+		'Password'  => Illuminate\Support\Facades\Password::class,
+		'Queue'     => Illuminate\Support\Facades\Queue::class,
+		'Redirect'  => Illuminate\Support\Facades\Redirect::class,
+		'Redis'     => Illuminate\Support\Facades\Redis::class,
+		'Request'   => Illuminate\Support\Facades\Request::class,
+		'Response'  => Illuminate\Support\Facades\Response::class,
+		'Route'     => Illuminate\Support\Facades\Route::class,
+		'Schema'    => Illuminate\Support\Facades\Schema::class,
+		'Session'   => Illuminate\Support\Facades\Session::class,
+		'URL'       => Illuminate\Support\Facades\URL::class,
+		'Validator' => Illuminate\Support\Facades\Validator::class,
+		'View'      => Illuminate\Support\Facades\View::class,
 
 	],
 

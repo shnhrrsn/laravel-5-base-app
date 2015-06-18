@@ -11,7 +11,7 @@ class Handler extends ExceptionHandler {
 	 * @var array
 	 */
 	protected $dontReport = [
-		'Symfony\Component\HttpKernel\Exception\HttpException'
+		\Symfony\Component\HttpKernel\Exception\HttpException::class
 	];
 
 	/**
@@ -34,16 +34,15 @@ class Handler extends ExceptionHandler {
 	 * @return \Illuminate\Http\Response
 	 */
 	public function render($request, Exception $e) {
-		if($this->isHttpException($e)) {
-			return $this->renderHttpException($e);
+		if(config('app.debug')) {
+			$whoopsHandler = new \Whoops\Handler\PrettyPageHandler;
+			$whoopsHandler->setEditor('sublime');
+
+			$whoops = new \Whoops\Run;
+			$whoops->pushHandler($whoopsHandler);
+			return $whoops->handleException($e);
 		} else {
-			if(config('app.debug')) {
-				$whoops = new \Whoops\Run;
-				$whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
-				return $whoops->handleException($e);
-			} else {
-				return parent::render($request, $e);
-			}
+			return parent::render($request, $e);
 		}
 	}
 

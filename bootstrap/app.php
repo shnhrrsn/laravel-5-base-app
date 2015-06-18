@@ -26,12 +26,12 @@ $app = new App\Application(
 |
 */
 
-$app->singleton('Illuminate\Contracts\Http\Kernel', 'App\Http\Kernel');
-$app->singleton('Illuminate\Contracts\Console\Kernel', 'App\Console\Kernel');
-$app->singleton('Illuminate\Contracts\Debug\ExceptionHandler', 'App\Exceptions\Handler');
+$app->singleton(Illuminate\Contracts\Http\Kernel::class, App\Http\Kernel::class);
+$app->singleton(Illuminate\Contracts\Console\Kernel::class, App\Console\Kernel::class);
+$app->singleton(Illuminate\Contracts\Debug\ExceptionHandler::class, App\Exceptions\Handler::class);
 
-$app->singleton('Illuminate\Foundation\Bootstrap\DetectEnvironment', 'App\Bootstrap\DetectEnvironment');
-$app->singleton('Illuminate\Foundation\Bootstrap\LoadConfiguration', 'App\Bootstrap\LoadConfiguration');
+$app->singleton(Illuminate\Foundation\Bootstrap\DetectEnvironment::class, App\Bootstrap\DetectEnvironment::class);
+$app->singleton(Illuminate\Foundation\Bootstrap\LoadConfiguration::class, App\Bootstrap\LoadConfiguration::class);
 
 /*
 |--------------------------------------------------------------------------

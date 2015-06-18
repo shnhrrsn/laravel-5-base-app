@@ -1,5 +1,5 @@
 @extends('layout.master')
 
 @section('content')
-	<div class="title">Be right back.</div>
-@stop
+	<h1>Be right back.</h1>
+@endsection

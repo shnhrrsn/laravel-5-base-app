@@ -8,5 +8,4 @@ class ControllerServiceProvider extends \Illuminate\Routing\ControllerServicePro
 		});
 	}
 
-
 }

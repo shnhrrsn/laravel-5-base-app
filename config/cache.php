@@ -39,12 +39,12 @@ return [
 		'database' => [
 			'driver' => 'database',
 			'table'  => 'cache',
-			'connection' => null,
+			'connection' => null
 		],
 
 		'file' => [
 			'driver' => 'file',
-			'path'   => storage_path().'/framework/cache',
+			'path'   => storage_path('framework/cache')
 		],
 
 		'memcached' => [
