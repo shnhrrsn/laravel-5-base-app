@@ -4,6 +4,19 @@ return [
 
 	/*
 	|--------------------------------------------------------------------------
+	| Application Environment
+	|--------------------------------------------------------------------------
+	|
+	| This value determines the "environment" your application is currently
+	| running in. This may determine how you prefer to configure various
+	| services your application utilizes.
+	|
+	*/
+
+	'env' => array_get($_SERVER, 'APP_ENV', 'production'),
+
+    /*
+    |--------------------------------------------------------------------------
 	| Application Debug Mode
 	|--------------------------------------------------------------------------
 	|
@@ -14,22 +27,6 @@ return [
 	*/
 
 	'debug' => false,
-
-	/*
-	|--------------------------------------------------------------------------
-	| Controller IoC Mode
-	|--------------------------------------------------------------------------
-	|
-	| By default, Laravel 5 offers IoC resolving to controller methods.
-	| this functionality is required to use the new Requests classes for handling
-	| form posts.
-	|
-	| IoC can be expensive as it invokes runtime reflection on each call.
-	| If you're not using it, you should turn this off.
-	|
-	*/
-
-	'controller_ioc' => true,
 
 	/*
 	|--------------------------------------------------------------------------
@@ -129,12 +126,10 @@ return [
 		/*
 		 * Laravel Framework Service Providers...
 		 */
-		Illuminate\Foundation\Providers\ArtisanServiceProvider::class,
 		Illuminate\Auth\AuthServiceProvider::class,
 		Illuminate\Bus\BusServiceProvider::class,
 		Illuminate\Cache\CacheServiceProvider::class,
 		Illuminate\Foundation\Providers\ConsoleSupportServiceProvider::class,
-		// Illuminate\Routing\ControllerServiceProvider::class,
 		Illuminate\Cookie\CookieServiceProvider::class,
 		Illuminate\Database\DatabaseServiceProvider::class,
 		Illuminate\Encryption\EncryptionServiceProvider::class,
@@ -151,12 +146,11 @@ return [
 		Illuminate\Translation\TranslationServiceProvider::class,
 		Illuminate\Validation\ValidationServiceProvider::class,
 		// Illuminate\View\ViewServiceProvider::class,
-		Illuminate\Html\HtmlServiceProvider::class,
+		Collective\Html\HtmlServiceProvider::class,
 
 		/*
 		 * Base App Support Service Providers
 		 */
-		Shnhrrsn\LaravelSupport\Routing\ControllerServiceProvider::class,
 		Shnhrrsn\LaravelSupport\View\ViewServiceProvider::class,
 
 		/*
@@ -195,10 +189,10 @@ return [
 		'DB'        => Illuminate\Support\Facades\DB::class,
 		'Event'     => Illuminate\Support\Facades\Event::class,
 		'File'      => Illuminate\Support\Facades\File::class,
-		'Form'      => Illuminate\Html\FormFacade::class,
+		'Gate'      => Illuminate\Support\Facades\Gate::class,
+		'Form'      => Collective\Html\FormFacade::class,
 		'Hash'      => Illuminate\Support\Facades\Hash::class,
-		'HTML'      => Illuminate\Html\HtmlFacade::class,
-		'Input'     => Illuminate\Support\Facades\Input::class,
+		'HTML'      => Collective\Html\HtmlFacade::class,
 		'Lang'      => Illuminate\Support\Facades\Lang::class,
 		'Log'       => Illuminate\Support\Facades\Log::class,
 		'Mail'      => Illuminate\Support\Facades\Mail::class,

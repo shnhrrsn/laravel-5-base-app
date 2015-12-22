@@ -48,7 +48,7 @@ return [
 
 		'sqlite' => [
 			'driver'   => 'sqlite',
-			'database' => storage_path('database.sqlite'),
+			'database' => database_path('database.sqlite'),
 			'prefix'   => '',
 		],
 
@@ -81,6 +81,7 @@ return [
 			'database' => '',
 			'username' => 'root',
 			'password' => '',
+			'charset'  => 'utf8',
 			'prefix'   => '',
 		],
 

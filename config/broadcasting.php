@@ -33,6 +33,9 @@ return [
 			'key' => null,
 			'secret' => null,
 			'app_id' => null,
+			'options' => [
+				//
+			],
 		],
 
 		'redis' => [

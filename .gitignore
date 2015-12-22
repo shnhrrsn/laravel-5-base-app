@@ -1,3 +1,5 @@
 /vendor
+Homestead.yaml
+Homestead.json
 .env
 .sass-cache

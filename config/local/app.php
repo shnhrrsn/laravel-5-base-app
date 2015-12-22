@@ -2,6 +2,7 @@
 
 return [
 
+	'env' => 'local',
 	'debug' => true
 
 ];
