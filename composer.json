@@ -5,7 +5,7 @@
 		"php": ">=5.5.9",
 		"laravel/framework": "5.2.*",
 		"laravelcollective/html": "dev-master",
-		"shnhrrsn/laravel-5-base-app-support": "1.2.*",
+		"shnhrrsn/laravel-5-base-app-support": "2.0.*",
 		"filp/whoops": "1.*"
 	},
 	"require-dev": {
