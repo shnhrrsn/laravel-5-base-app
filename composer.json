@@ -6,7 +6,7 @@
 		"laravel/framework": "5.2.*",
 		"laravelcollective/html": "dev-master",
 		"shnhrrsn/laravel-5-base-app-support": "1.2.*",
-		"filp/whoops": "2.0.x-dev"
+		"filp/whoops": "1.*"
 	},
 	"require-dev": {
 		"symfony/css-selector": "2.8.*|3.0.*",
